@@ -1,7 +1,6 @@
 
 import { useAnimateInView } from '@/lib/framer-animations';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const { ref: titleRef, inView: titleInView } = useAnimateInView();
@@ -43,19 +42,12 @@ const Hero = () => {
               ref={buttonRef}
               className={`${buttonInView ? 'animate-slide-up delay-500' : 'opacity-0'}`}
             >
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex justify-center lg:justify-start">
                 <Button 
                   size="lg" 
                   className="rounded-full bg-primary hover:bg-primary/90 text-white font-medium px-8"
                 >
                   Agendar Consulta
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="rounded-full text-white border-white hover:bg-white hover:text-foreground font-medium px-8"
-                >
-                  Saiba Mais <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>
